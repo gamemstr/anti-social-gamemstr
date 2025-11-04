@@ -15,6 +15,7 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import ProviderLogin from "./provider-login";
 
 export function SignUpForm({
   className,
@@ -114,6 +115,7 @@ export function SignUpForm({
             </div>
           </form>
         </CardContent>
+        <ProviderLogin />
       </Card>
     </div>
   );
