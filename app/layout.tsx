@@ -7,6 +7,7 @@ import { ThemeSwitcher } from "@/components/theme-switcher";
 import { AuthButton } from "@/components/auth-button";
 import { DeployButton } from "@/components/deploy-button";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -53,6 +54,7 @@ export default function RootLayout({
             <main className="min-h-screen flex flex-col items-center">
               <div className="flex-1 w-full flex flex-col gap-20 items-center">
                 {children}
+                <Analytics />
               </div>
             </main>
             <footer className="w-full flex items-center justify-center border-t mx-auto text-center text-xs gap-8 py-16">
