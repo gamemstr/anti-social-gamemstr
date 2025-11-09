@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { InfoIcon } from "lucide-react";
 import { FetchDataSteps } from "@/components/tutorial/fetch-data-steps";
+import { RealtimeChat } from "@/components/realtime-chat";
 
 export default async function ProtectedPage() {
   const supabase = await createClient();
@@ -28,8 +29,8 @@ export default async function ProtectedPage() {
           </pre>
         </div>
         <div>
-          <h2 className="font-bold text-2xl mb-4">Next steps</h2>
-          <FetchDataSteps />
+          <h2 className="font-bold text-2xl mb-4">The Lounge</h2>
+          <RealtimeChat roomName={"TheLounge"} username={data?.claims.user_name} />
         </div>
       </div>
   );
