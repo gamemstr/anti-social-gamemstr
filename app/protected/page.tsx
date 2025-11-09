@@ -14,7 +14,7 @@ export default async function ProtectedPage() {
   }
 
   return (
-      <div className="flex flex-col gap-12 p-5">
+      <div className="flex flex-col gap-12 p-5 max-w-full">
         <div className="w-full">
           <div className="bg-accent text-sm p-3 px-5 rounded-md text-foreground flex gap-3 items-center">
             <InfoIcon size="16" strokeWidth={2} />
